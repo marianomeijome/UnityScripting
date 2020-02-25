@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2779624007519813692}
   - component: {fileID: 9136599390989875256}
   - component: {fileID: 4661832826979085900}
+  - component: {fileID: 1154420773}
   m_Layer: 0
   m_Name: claws1
   m_TagString: Untagged
@@ -26,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 663104869979354896}
   m_LocalRotation: {x: -0.34500954, y: -0.61722636, z: 0.61722624, w: 0.34500992}
-  m_LocalPosition: {x: 0.14421907, y: 0.087185055, z: 0.00001582516}
+  m_LocalPosition: {x: 0.14421907, y: 0.087185055, z: 0}
   m_LocalScale: {x: 0.22690532, y: 0.45837733, z: 0.22666726}
   m_Children:
   - {fileID: 5182650669693655404}
@@ -80,6 +81,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &1154420773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 663104869979354896}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4a6d60f37454e049b61e509f8fcf1d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  position: {x: 0.6282952, y: 3.2324495, z: -0.019253884}
 --- !u!1 &666557925625080367
 GameObject:
   m_ObjectHideFlags: 0
@@ -91,8 +105,9 @@ GameObject:
   - component: {fileID: 8726644293158406512}
   - component: {fileID: 894981608885922759}
   - component: {fileID: 4327641898100478273}
+  - component: {fileID: 722641715}
   m_Layer: 0
-  m_Name: polySurface46
+  m_Name: claw_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -105,13 +120,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 666557925625080367}
-  m_LocalRotation: {x: -0.69494015, y: 0.13060696, z: 0.13060696, w: 0.69494015}
-  m_LocalPosition: {x: 3.3987074, y: -0.12382778, z: 0.41724604}
-  m_LocalScale: {x: 4.406298, y: 4.412586, z: 2.181611}
+  m_LocalRotation: {x: -0.69588834, y: 0.12573963, z: -0.12518123, w: -0.69588697}
+  m_LocalPosition: {x: 3.399, y: -0.145, z: 0.417}
+  m_LocalScale: {x: 4.406298, y: 4.412586, z: -2.18}
   m_Children: []
   m_Father: {fileID: 2779624007519813692}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -270.03998, y: 0, z: 20.395}
 --- !u!33 &894981608885922759
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -158,6 +173,24 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &722641715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 666557925625080367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bd889f268439bf448a88616de8a8a0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyBinding: Translate7
+  speed: 2
+  minRotation: {x: 0, y: 0, z: 0}
+  maxRotation: {x: 0, y: 0, z: 0}
+  minTranslation: {x: 0, y: 0, z: -0.28}
+  maxTranslation: {x: 0, y: 0, z: -0.09}
 --- !u!1 &3655648131508866772
 GameObject:
   m_ObjectHideFlags: 0
@@ -254,6 +287,8 @@ MonoBehaviour:
   speed: 20
   minRotation: {x: 0, y: -45, z: 0}
   maxRotation: {x: 0, y: 60, z: 0}
+  minTranslation: {x: 0, y: 0, z: 0}
+  maxTranslation: {x: 0, y: 0, z: 0}
 --- !u!1 &5385378910125056559
 GameObject:
   m_ObjectHideFlags: 0
@@ -330,14 +365,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6576554458288062201}
-  m_LocalRotation: {x: -0.00000021982271, y: 0.0000000023057893, z: -0.6281806, w: 0.7780676}
+  m_LocalRotation: {x: 0, y: -0, z: 0.6293206, w: -0.7771458}
   m_LocalPosition: {x: 1.3105464, y: 0.015301347, z: 0.0021866835}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2779624007519813692}
   m_Father: {fileID: 8943750955493728753}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -180.00002, z: 48.953003}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 282}
 --- !u!33 &6007351050859383575
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -398,8 +433,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyBinding: Vertical2
   speed: 20
-  minRotation: {x: 0, y: 0, z: 75}
-  maxRotation: {x: 0, y: 0, z: 115}
+  minRotation: {x: 0, y: 0, z: 280}
+  maxRotation: {x: 0, y: 0, z: 300}
+  minTranslation: {x: 0, y: 0, z: 0}
+  maxTranslation: {x: 0, y: 0, z: 0}
 --- !u!1 &6744699540437231487
 GameObject:
   m_ObjectHideFlags: 0
@@ -496,6 +533,8 @@ MonoBehaviour:
   speed: 20
   minRotation: {x: 0, y: 0, z: 90}
   maxRotation: {x: 0, y: 0, z: 215}
+  minTranslation: {x: 0, y: 0, z: 0}
+  maxTranslation: {x: 0, y: 0, z: 0}
 --- !u!1 &7173991161653537933
 GameObject:
   m_ObjectHideFlags: 0
@@ -585,8 +624,9 @@ GameObject:
   - component: {fileID: 5182650669693655404}
   - component: {fileID: 3814418055810866419}
   - component: {fileID: 2950677878326197073}
+  - component: {fileID: 1826966589}
   m_Layer: 0
-  m_Name: polySurface45
+  m_Name: claw_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -599,13 +639,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7467388300558366519}
-  m_LocalRotation: {x: -0.69494015, y: 0.13060696, z: 0.13060696, w: 0.69494015}
+  m_LocalRotation: {x: -0.6974512, y: 0.1380927, z: 0.12300244, w: 0.6923603}
   m_LocalPosition: {x: 3.3987074, y: 0.20378356, z: 0.41724604}
   m_LocalScale: {x: 4.406298, y: 4.412586, z: -2.181611}
   m_Children: []
   m_Father: {fileID: 2779624007519813692}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -91.28999, y: -60.717987, z: 81.996994}
 --- !u!33 &3814418055810866419
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -652,6 +692,24 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &1826966589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7467388300558366519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bd889f268439bf448a88616de8a8a0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyBinding: Translate5
+  speed: 2
+  minRotation: {x: 0, y: 0, z: 0}
+  maxRotation: {x: 0, y: 0, z: 0}
+  minTranslation: {x: 0, y: 0, z: 0}
+  maxTranslation: {x: 0, y: 0, z: 0.5}
 --- !u!1 &8591676982600372847
 GameObject:
   m_ObjectHideFlags: 0
@@ -748,3 +806,5 @@ MonoBehaviour:
   speed: 20
   minRotation: {x: 0, y: 0, z: 0}
   maxRotation: {x: 0, y: 0, z: 45}
+  minTranslation: {x: 0, y: 0, z: 0}
+  maxTranslation: {x: 0, y: 0, z: 0}

@@ -3,14 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //[ExecuteInEditMode]
-public class RotateJoint : MonoBehaviour
+public class ManipulateJoint : MonoBehaviour
 {
     public string keyBinding = "";
     public float speed = 20f;
    
     public Vector3 minRotation = Vector3.zero;
     public Vector3 maxRotation = Vector3.zero;
-    
+
+    public Vector3 minTranslation = Vector3.zero;
+    public Vector3 maxTranslation = Vector3.zero;
+
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +28,7 @@ public class RotateJoint : MonoBehaviour
     void Update()
     {
         ConstrainAxes();
+        ConstrainTranslations();
     }
     void ConstrainAxes()
     {
@@ -97,4 +101,74 @@ public class RotateJoint : MonoBehaviour
 
     }
 
+    void ConstrainTranslations()
+    {
+        
+        var currentX = transform.position.x;
+        var currentY = transform.position.y;
+        var currentZ = transform.position.z;
+
+        if (minTranslation.x != maxTranslation.x)
+        {
+            float axes = Input.GetAxis(keyBinding);
+
+            if (axes > 0.2f || axes < -0.2f)
+            {
+                axes *= Time.deltaTime * speed;
+
+                var newTranslation = currentX + axes;
+                //Debug.Log(newTranslation);
+                if (newTranslation > minTranslation.x && newTranslation < maxTranslation.x)
+                {
+                    Vector3 translationX = new Vector3(newTranslation, currentY, currentZ);
+                    transform.position = translationX;
+                }
+
+
+            }
+
+        }
+
+        if (minTranslation.y != maxTranslation.y)
+        {
+            float axes = Input.GetAxis(keyBinding);
+
+            if (axes > 0.2f || axes < -0.2f)
+            {
+                axes *= Time.deltaTime * speed;
+
+                var newTranslation = currentY + axes;
+                //Debug.Log(newTranslation);
+                if (newTranslation > minTranslation.y && newTranslation < maxTranslation.y)
+                {
+                    Vector3 translationY = new Vector3(currentX, newTranslation, currentZ);
+                    transform.position = translationY;
+                }
+
+
+            }
+
+        }
+
+        if (minTranslation.z != maxTranslation.z)
+        {
+            float axes = Input.GetAxis(keyBinding);
+
+            if(axes > 0.2f || axes < -0.2f)
+            {
+                axes *= Time.deltaTime * speed;
+
+                var newTranslation = currentZ + axes;
+                //Debug.Log(newTranslation);
+                if (newTranslation > minTranslation.z && newTranslation < maxTranslation.z)
+                {
+                    Vector3 translationZ = new Vector3(currentX, currentY, newTranslation);
+                    transform.position = translationZ;
+                }
+
+                
+            }
+            
+        }
+    }
 }
